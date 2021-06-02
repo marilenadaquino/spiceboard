@@ -1,0 +1,237 @@
+{
+  "@id": "spice:00003_script",
+  "_label": "GAM game",
+  "@type":"Script",
+  "project": {
+    "@id":"spice:00003_script_project",
+    "@type":"StoryBasedNarrativeProject",
+    "purpose": [
+      {
+        "@id": "spice:00003_user_stories_list",
+        "@type":"StoryBasedNarrativeList"
+      }
+    ]
+  },
+  "purpose": [
+    {
+      "@id":"script:engagement",
+      "@type":"Goal"
+    },
+    {
+      "@id":"script:self-expression",
+      "@type":"Goal"
+    },
+    {
+      "@id":"script:storytelling",
+      "@type":"Goal"
+    }
+  ],
+  "stage": [
+    {
+      "@id": "spice:00003_preparation",
+      "@type":"Preparation",
+      "_label": "The selection of artefacts.",
+      "task": [
+        {
+          "@id": "spice:00003_artefact_selection",
+          "@type":["ArtefactsSelection","MultimediaSelection"],
+          "_label": "The curators create a list of pictures of artefacts to be shown to users.",
+          "precedes":{"@id":"spice:00003_presentation"},
+          "task_role":{"@id":"script:curator"},
+          "input": {
+            "@id": "spice:00003_gam_artefact",
+            "belongs_to":"Artefact"
+          },
+          "output": {
+            "@id": "spice:00003_gam_image",
+            "belongs_to":"Photograph"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "spice:00003_running",
+      "@type":"Running",
+      "_label": "The activity runs online. Users select pictures of artefacts and contribute with stories",
+      "task": [
+        {
+          "@id": "spice:00003_presentation",
+          "@type":"PresentationCuratorialContents",
+          "_label": "The web application shows the list of pictures in a random order.",
+          "precedes":{"@id":"spice:00003_user_picture_selection"},
+          "follows":{"@id":"spice:00003_artefact_selection"},
+          "task_role":{"@id":"script:software-agent"},
+          "input": {
+            "@id": "spice:00003_gam_image",
+            "belongs_to":"Photograph"
+          }
+        },
+        {
+          "@id": "spice:00003_user_picture_selection",
+          "@type":"MultimediaSelection",
+          "_label": "The user may pick 1 picture.",
+          "precedes":{"@id":"spice:00003_text_answering"},
+          "follows":{"@id":"spice:00003_presentation"},
+          "task_role":{"@id":"script:web-user"},
+          "input": {
+            "@id": "spice:00003_gam_image",
+            "belongs_to":"Photograph"
+          },
+          "conditional_output": {
+            "@id": "spice:00003_gam_selected_image",
+            "belongs_to":"Photograph"
+          }
+        },
+        {
+          "@id": "spice:00003_text_answering",
+          "@type":"FreeTextAnswering",
+          "_label": "The web application prompts three suggestions (templates) to encourage the user writing a story about the selected picture: 'Mi ricorda:' (It reminds me), 'Mi fa sentire:' (It makes me feel), 'Mi fa pensare a:' (It makes me think of). The user may or may not answer.",
+          "precedes":{"@id":"spice:00003_emoji_answering"},
+          "follows":{"@id":"spice:00003_user_picture_selection"},
+          "task_role":{"@id":"script:web-user"},
+          "input": {
+            "@id": "spice:00003_gam_selected_image",
+            "belongs_to":"Photograph"
+          },
+          "conditional_output": {
+            "@id": "spice:00003_user_text",
+            "belongs_to":"Text"
+          }
+        },
+        {
+          "@id": "spice:00003_emoji_answering",
+          "@type":"AddEmoticon",
+          "_label": "The web application allows the user to add an emoticon related to the selected picture. The user may or may not answer.",
+          "precedes":{"@id":"spice:00003_hashtag_answering"},
+          "follows":{"@id":"spice:00003_text_answering"},
+          "task_role":{"@id":"script:web-user"},
+          "input": {
+            "@id": "spice:00003_gam_selected_image",
+            "belongs_to":"Photograph"
+          },
+          "conditional_output": {
+            "@id": "spice:00003_user_emoji",
+            "belongs_to":"Text"
+          }
+        },
+        {
+          "@id": "spice:00003_hashtag_answering",
+          "@type":"Tagging",
+          "_label": "The web application allows the user to add a list of hashtags related to the selected picture. The user may or may not answer.",
+          "conditional_precedes":[{"@id":"spice:00003_picture_recommendation"},{"@id":"spice:00003_user_picture_selection"}],
+          "follows":{"@id":"spice:00003_emoji_answering"},
+          "task_role":{"@id":"script:web-user"},
+          "input": {
+            "@id": "spice:00003_gam_selected_image",
+            "belongs_to":"Photograph"
+          },
+          "conditional_output": {
+            "@id": "spice:00003_user_hashtag",
+            "belongs_to":"Text"
+          }
+        },
+        {
+          "@id": "spice:00003_picture_recommendation",
+          "@type":"Recommendation",
+          "_label": "The web application recommends the user another picture to be included in the story. The user may or may not accept the suggestion.",
+          "follows":{"@id":"spice:00003_hashtag_answering"},
+          "task_role":[ {"@id":"script:software-agent"},{"@id":"script:web-user"}],
+          "input": {
+            "@id": "spice:00003_gam_recommended_image",
+            "belongs_to":"Photograph"
+          },
+          "conditional_output": {
+            "@id": "spice:00003_user_acceptance",
+            "belongs_to":"Text"
+          }
+        }
+      ]
+    }
+  ],
+  "@context": {
+    "aff":"https://w3id.org/spice/SON/affordance/",
+    "arco": "https://w3id.org/arco/ontology/arco/",
+    "arco-core" :"https://w3id.org/arco/ontology/core/",
+    "arco-cd":"https://w3id.org/arco/ontology/context-description/",
+    "arco-dd":"https://w3id.org/arco/ontology/denotative-description/",
+    "ex":"https://w3id.org/spice/SON/undefined/",
+    "earmark":"http://www.essepuntato.it/2008/12/earmark#",
+    "emotion":"https://w3id.org/spice/SON/emotion/",
+    "fc":"https://w3id.org/spice/SON/fruitionContext/",
+    "narrative":"https://w3id.org/spice/SON/Narrative-Labyrinth#",
+    "script":"https://w3id.org/spice/SON/scripting/",
+    "spice": "https://w3id.org/spice/manifest/",
+    "rdfs":"http://www.w3.org/2000/01/rdf-schema#",
+
+    "project": "narrative:hasProject",
+    "StoryBasedNarrativeProject":"narrative:Story-basedNarrativeProject",
+    "StoryBasedNarrativeList":"narrative:basedNarrativeList",
+    "Affordance":"aff:Affordance",
+    "affordance":"aff:hasAffordance",
+    "holds":"aff:holds",
+
+    "Artefact":"arco:CulturalProperty",
+    "ArtefactCollection":"arco:CulturalPropertyCollection",
+    "Photograph":"arco-cd:PhotographicDocumentation",
+
+    "Device":"fc:Device",
+    "Email":"ex:Email",
+    "Emotion":"emotion:Emotion",
+    "Image":"ex:Image",
+    "ImageCollection":"ex:ImageCollection",
+    "WebContent":"ex:WebContent",
+    "Text":"earmark:StringDocuverse",
+    "Algorithm": "ex:Algorithm",
+
+    "web_content":"spice:web_content",
+    "content":"spice:content",
+    "annotated_emotion":"spice:emotion",
+
+    "Preparation": "script:ActivityPreparation",
+    "Running":"script:Running",
+    "MultimediaSelection":"script:SelectionOfMultimediaContents",
+    "ArtefactsSelection":"script:SelectionOfArtefacts",
+    "FreeTextAnswering":"script:FreeTextAnswering",
+    "AddEmoticon":"script:AddEmoticon",
+    "Tagging":"script:Tagging",
+    "Recommendation":"script:Recommendation",
+    "PresentationCuratorialContents":"script:CuratorialContentPresentation",
+    "Action":"script:Action",
+    "RoleInTime":"script:RoleInTime",
+    "Script":"script:Script",
+    "ScriptExecution":"script:ScriptExecution",
+    "Stage":"script:Stage",
+    "Goal":"script:Goal",
+    "Task":"script:Task",
+
+    "at_time":"script:hasTimeInterval",
+    "conditional_input":"script:hasConditionalInput",
+    "conditional_output":"script:hasConditionalOutput",
+    "conditional_precedes":"script:conditionalPrecedes",
+    "conditional_follows":"script:conditionalFollows",
+    "corresponds_to":"script:correspondsTo",
+    "executes":"script:executesTask",
+    "follows":"script:follows",
+    "generated":"script:generated",
+    "includes":"script:includesAction",
+    "involves":"script:involves",
+    "input":"script:hasInput",
+    "occurs_within":"script:occursWithin",
+    "of_agent":"script:isRoleInTimeOf",
+    "output":"script:hasOutput",
+    "precedes":"script:precedes",
+    "purpose":"script:hasPurpose",
+    "role_in_time":"script:hasRoleInTime",
+    "satisfies":"script:satisfies",
+    "stage":"script:definesStage",
+    "task":"script:definesTask",
+    "task_role":"script:isTaskOf",
+    "used":"script:used",
+    "with_role":"script:withRole",
+
+
+    "comment":"rdfs:comment",
+    "_label":"rdfs:label"
+  }
+
+}

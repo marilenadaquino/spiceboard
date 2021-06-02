@@ -1,0 +1,3922 @@
+{
+  "@context": {
+    "Action": "script:Action",
+    "AddEmoticon": "script:AddEmoticon",
+    "Artefact": "arco:CulturalProperty",
+    "ArtefactCollection": "arco:CulturalPropertyCollection",
+    "ArtefactsSelection": "script:SelectionOfArtefacts",
+    "AuthorshipAttribution": "arco-cd:AuthorshipAttribution",
+    "CreativeWork": "schema:CreativeWork",
+    "EmotionRelation": "emotion:EmotionRelation",
+    "FreeTextAnswering": "script:FreeTextAnswering",
+    "Goal": "script:Goal",
+    "InteractionCounter": "schema:InteractionCounter",
+    "LikeAction": "schema:LikeAction",
+    "MultimediaSelection": "script:SelectionOfMultimediaContents",
+    "Photo": "arco-cd:PhotographicDocumentation",
+    "Preparation": "script:ActivityPreparation",
+    "PresentationCuratorialContents": "script:CuratorialContentPresentation",
+    "Recommendation": "script:Recommendation",
+    "RemoteEncounter": "fc:RemoteFruitionContext",
+    "RoleInTime": "script:RoleInTime",
+    "Running": "script:Running",
+    "Script": "script:Script",
+    "ScriptExecution": "script:ScriptExecution",
+    "SocialMediaPosting": "schema:SocialMediaPosting",
+    "Stage": "script:Stage",
+    "String": "earmark:StringDocuverse",
+    "Tagging": "script:Tagging",
+    "Task": "script:Task",
+    "about": "schema:about",
+    "arco": "https://w3id.org/arco/ontology/arco/",
+    "arco-cd": "https://w3id.org/arco/ontology/context-description/",
+    "arco-core": "https://w3id.org/arco/ontology/core/",
+    "arco-dd": "https://w3id.org/arco/ontology/denotative-description/",
+    "art_type": "arco-dd:hasCulturalPropertyType",
+    "artefact": "fc:fruitedEntity",
+    "at_time": "script:hasTimeInterval",
+    "attributed_author": "arco-cd:hasAttributedAuthor",
+    "author": "schema:author",
+    "authorship_attribution": "arco-cd:hasAuthorshipAttribution",
+    "class": "@type",
+    "conditional_follows": "script:conditionalFollows",
+    "conditional_input": "script:hasConditionalInput",
+    "conditional_output": "script:hasConditionalOutput",
+    "conditional_precedes": "script:conditionalPrecedes",
+    "content": "earmark:hasContent",
+    "corresponds_to": "script:correspondsTo",
+    "date": "arco-cd:hasDatingEvent",
+    "datePublished": "schema:datePublished",
+    "date_time": "dul:hasIntervalDate",
+    "dating_attribution": "arco-cd:hasDating",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "description": "arco-core:description",
+    "documented_in": "arco-cd:hasDocumentation",
+    "dul": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+    "earmark": "http://www.essepuntato.it/2008/12/earmark#",
+    "emotion": "https://w3id.org/spice/SON/emotion/",
+    "end": "arco:endTime",
+    "executed_in": "script:occursWithin",
+    "executes": "script:executesTask",
+    "experiencer": "emotion:experiencer",
+    "fc": "https://w3id.org/spice/SON/fruitionContext/",
+    "follows": "script:follows",
+    "generated": "script:generated",
+    "has_keeper": "arco:hasRelatedAgency",
+    "height_length": "arco-dd:HeightLength",
+    "image": "schema:image",
+    "image_url": "arco-cd:url",
+    "in_context": "fc:hasFruitionContext",
+    "in_event": "fc:occursWithin",
+    "includes": "script:includesAction",
+    "input": "script:hasInput",
+    "institute": "https://w3id.org/spice/institute/",
+    "interactionStatistic": "schema:interactionStatistic",
+    "interactionType": "schema:interactionType",
+    "inv_num": "arco-cd:hasInventory",
+    "involves": "script:involves",
+    "label": "rdfs:label",
+    "local_id": "arco:uniqueIdentifier",
+    "material": "arco-dd:hasMaterialOrTechnique",
+    "measure_type": "arco-dd:hasMeasurementType",
+    "measure_value": "arco-dd:hasValue",
+    "medium": "fc:isSupportedBy",
+    "modality": "fc:hasModality",
+    "narrative": "https://w3id.org/spice/SON/Narrative-Labyrinth#",
+    "online_record": "dc:source",
+    "participant": "dul:hasParticipant",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "satisfies": "script:satisfies",
+    "schema": "http://schema.org/",
+    "script": "https://w3id.org/spice/SON/scripting/",
+    "semiotics": "http://ontologydesignpatterns.org/cp/owl/semiotics.owl#",
+    "sharedContent": "schema:sharedContent",
+    "spice": "https://w3id.org/spice/",
+    "start": "arco:startTime",
+    "stimulus": "emotion:stimulus",
+    "subject": "arco-cd:hasSubject",
+    "subject_of": "schema:subjectOf",
+    "text": "schema:text",
+    "time_interval": "dul:hasTimeInterval",
+    "title": "arco-cd:title",
+    "uri": "@id",
+    "userInteractionCount": "schema:userInteractionCount",
+    "value": "@value"
+  },
+  "@graph": [
+    {
+      "class": "String",
+      "content": "Il Bacio, Francis Picabia",
+      "uri": "https://w3id.org/spice/instagram_post/CLgqH97pwBD/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/62"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/699538085"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-04T07:56:26+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CK3GupeBsq-"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CK3GupeBsq-"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CK3GupeBsq-/text"
+        },
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/145645120_261798248847583_9143528629703870757_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=mFQT1vnMrU8AX_LMTye&tp=1&oh=46f6c2e065ff3dd5cb047b94a5fe1ceb&oe=605C9070"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CK3GupeBsq-"
+    },
+    {
+      "class": "String",
+      "content": "6 luglio, giornata mondiale del bacio \\n\\n#giornatamondialedelbacio #francispicabia #gamtorino #artdaily",
+      "uri": "https://w3id.org/spice/instagram_post/CCSw5sHoTVM/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B2kA9pnl3fU",
+      "userInteractionCount": 27
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/BfQorwCAB6K",
+      "userInteractionCount": 3
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/ByTU6uio2s2",
+      "userInteractionCount": 18
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CF4WGQSDNYR",
+      "userInteractionCount": 137
+    },
+    {
+      "class": "emotion:Anger",
+      "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_4_emotion_26-36_anger"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/57"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/14025496909"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-12-10T15:31:01+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B55TS0diDcd"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B55TS0diDcd"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/70506334_742009359633703_6471523415057494506_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=rVtGKm8D0TQAX-LmEEd&tp=1&oh=e481fa6562d6846813357ec0f895b0c8&oe=605E78E1"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B55TS0diDcd/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B55TS0diDcd"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CGNkkCJAs7z",
+      "userInteractionCount": 22
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B4UVLTQoogq",
+      "userInteractionCount": 270
+    },
+    {
+      "class": "String",
+      "content": "🖼 L’opera del giorno: Sirena o Abisso verde, di Giulio Aristide Sartorio (1893).",
+      "uri": "https://w3id.org/spice/instagram_post/CHtJMIGgYDU/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B4Xv3KOISvV",
+      "userInteractionCount": 6
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B-zQHkQoCmc",
+      "userInteractionCount": 129
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/520562472"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-29T10:41:24+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CG7DtEMpisk"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CG7DtEMpisk"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/122828436_1314224388923414_5199372144045882503_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=102&_nc_ohc=6HfGV3fWoFgAX-S9yi7&tp=1&oh=ddb1b2f5feb93cdab1aef34c7396629a&oe=605C8B94"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CG7DtEMpisk/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CG7DtEMpisk"
+    },
+    {
+      "class": "String",
+      "content": "#1919 👨\\u200d🎨 Otto Dix ‘Fritz Muller, Seaman from Pieschen’ #ottodix",
+      "uri": "https://w3id.org/spice/instagram_post/B2kA9pnl3fU/text"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text//pointer_range_1/anno_3_emotion_164-171_like"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text//pointer_range_1"
+    },
+    {
+      "class": "emotion:Anticipation",
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_2_emotion_24-30_anticipation"
+    },
+    {
+      "class": "emotion:Anticipation",
+      "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/487443040"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-12-03T14:25:35+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B5nKPcgnam0"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B5nKPcgnam0"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/75489899_749265495594437_425045961749767418_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=105&_nc_ohc=5z1oQgbzFYwAX8YsANz&tp=1&oh=a626329b9cebed2fe499b1c18aa2385f&oe=605D3051"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0"
+    },
+    {
+      "class": "String",
+      "content": "Una giornata nel Rorschach @lamomaaa .\\n.\\n.\\n#gam #torino #painting #art",
+      "uri": "https://w3id.org/spice/instagram_post/B3FtBkPiSTc/text"
+    },
+    {
+      "arco-dd:hasSubject": {
+        "uri": "https://w3id.org/spice/instagram_post/CLhAYryJtRx/text"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/42"
+    },
+    {
+      "class": "String",
+      "content": "• Francis Picabia - Otto Dix\\n2. Giorgio De Chirico\\n3. Gino Severini\\n4. Mario Sironi\\n5. Marc Chagall\\n6. Paul Klee\\n7. Pablo Picasso \\n8. Yves Klein\\n9. Lucio Fontana\\n10. Andy Warhol",
+      "uri": "https://w3id.org/spice/instagram_post/CF4WGQSDNYR/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B8i6r4ToHAE/text"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CF4WGQSDNYR/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2ubJbHIxw9/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BwmPu1fgdmF/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8E8_hVIb-s/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BwzH0VyAI4R/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BvzyM24gqPG/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B3FtBkPiSTc/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CG7DtEMpisk/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2kA9pnl3fU/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2Zm3X5IUx-/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B1T-sWzI9TY/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9cI-IMHIxs/text"
+        }
+      ],
+      "emotion:triggers": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/37"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/47"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/17802732393"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-08-19T17:05:14+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B1WZYkSIQUJ"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B1WZYkSIQUJ"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text"
+        },
+        {
+          "uri": "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/69096644_477065616406820_1148706504557079590_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=i8Kk4p3NMhcAX_xd8oa&tp=1&oh=5d3b4896db69bff58b62890f04d27832&oe=605D517F"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ"
+    },
+    {
+      "class": "String",
+      "content": "went to a museum cause erika wanted to and it was pretty boring but it’s okay cause she said she’d get me a fanta after",
+      "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B5YxBfZIFfO/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/779089948"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-08-30T15:20:46+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CEg9HQAqgtZ"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CEg9HQAqgtZ"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/118649181_791820468294324_3171858164753774704_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=100&_nc_ohc=1J-M0BCv53MAX8UvjdL&tp=1&oh=9b67c17419362692dc7426482d42da94&oe=605E1ADB"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CEg9HQAqgtZ/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CEg9HQAqgtZ"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B8WuQIrq44K",
+      "userInteractionCount": 10
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/45"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/14690233893"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-03-15T10:21:45+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B9v8NvWIW7L"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B9v8NvWIW7L"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9v8NvWIW7L/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/89667083_125820658991445_6709950450252307755_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=109&_nc_ohc=2o0wkfgQ5N4AX_fr41w&tp=1&oh=0ae2b1121d75e17f62e6793360c9211b&oe=605E8EE6"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B9v8NvWIW7L"
+    },
+    {
+      "class": "emotion:Trust",
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_5_emotion_24-30_trust"
+    },
+    {
+      "class": "String",
+      "content": "Autoritratto in forma di guffo, Alberto Savinio (Andrea de Chirico)",
+      "uri": "https://w3id.org/spice/instagram_post/CLhAYryJtRx/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B1WZYkSIQUJ",
+      "userInteractionCount": 30
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CF1ZY-jiaYW",
+      "userInteractionCount": 140
+    },
+    {
+      "class": "String",
+      "content": "The collection of the GAM Torino is utterly incredible and includes some Twentieth Century gems. I’ll post three of my favourite works today. Let’s start with this 1920s Picabia, titled The Kiss, and bought from Gallerie Notizie.\\n.\\n#Picabia #Gam #Turin",
+      "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/231313970"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-03-06T14:10:17+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B9ZLNmxpLlP"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B9ZLNmxpLlP"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/88200721_3407951359219341_9029334525452961851_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=109&_nc_ohc=gZxTxRI6DQYAX8IlMod&tp=1&oh=c4b67bdc5d0e865ba2baf060a482be41&oe=605ECC6B"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9ZLNmxpLlP/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B9ZLNmxpLlP"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/44"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/8730927964"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-11T22:26:43+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLKr45kFomQ"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLKr45kFomQ"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLKr45kFomQ/text"
+        },
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/148658932_468633590836755_3345724054199031294_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=103&_nc_ohc=bVwCx4Ogf8gAX-qk1Pq&tp=1&oh=088d2f0ef771606a3a6b5dc13fce2399&oe=605E8545"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLKr45kFomQ"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2880373353"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-08-16T20:46:02+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CD9fNVdAD42"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CD9fNVdAD42"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/117736910_312209986865155_5769879032718561225_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=107&_nc_ohc=c1ph9_2rT7gAX-EqZbT&tp=1&oh=184f19bb8cb8afe1bd3d293bf6155438&oe=60605382"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CD9fNVdAD42/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CD9fNVdAD42"
+    },
+    {
+      "class": "emotion:Dislike",
+      "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+    },
+    {
+      "class": "emotion:Anticipation",
+      "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+    },
+    {
+      "class": "String",
+      "content": "Un uomo e una donna si baciano appassionatamente. Sono loro i protagonisti assoluti di \"Le baiser\", la tela di Francis Picabia con la quale abbiamo scelto di festeggiare San Valentino insieme a voi.\\n❤️\\nDopo il periodo, forse più celebre, delle fredde opere dadaiste sul tema della macchina, l\\'artista francese tornò alla figurazione e approdò alle immagini di amanti: è il periodo definito dei \"mostri\", nella cui serie si inserisce quest\\'opera, di cui Picabia ideò anche la cornice. \\nLe figure dei due innamorati sono appena accennate e rese con un segno spesso, frutto di una pittura veloce, se non immediata: forse è proprio per questo che l\\'opera ci trasmette grande freschezza e una carica di emozioni talmente potenti da scuoterci nel profondo.\\nBuon San Valentino a tutti gli innamorati! ❤️\\nPotete ammirare dal vivo \"Le baiser\" nella collezione permanente della GAM di Torino.\\nIngresso gratuito per tutti i possessori dell\\'Abbonamento Musei Piemonte Valle d\\'Aosta!\\nPer saperne di più, visitate il nostro sito!\\n\\n#RicorrenzeAMP",
+      "uri": "https://w3id.org/spice/instagram_post/B8i8vYuoKre/text"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B55TS0diDcd/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/38449656587"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-12-30T21:42:21+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CJb4oV6rAqK"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CJb4oV6rAqK"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CJb4oV6rAqK/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/133881579_146919320528073_7351832474687764017_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=109&_nc_ohc=LHgHXx-cBr4AX-OTgJF&tp=1&oh=372d376030eda60c84edf1dadf2071e4&oe=6060118D"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CJb4oV6rAqK"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1504687592"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-04-03T23:51:42+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/BvzyM24gqPG"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/BvzyM24gqPG"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BvzyM24gqPG/text"
+        },
+        {
+          "uri": "https://scontent-arn2-1.cdninstagram.com/v/t51.2885-15/e35/53830630_131093491307966_1968047260059632969_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=rioS7tP9qIIAX8jD3U2&tp=1&oh=9e939c8f408e6217f3d0dce14b0b5e81&oe=605FAC7E"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/BvzyM24gqPG"
+    },
+    {
+      "class": "String",
+      "content": "\"Si ride del cervo quando asciuga con i baci le lacrime dell\\'adultera\".\\nFrancis Picabia - Il Bacio",
+      "uri": "https://w3id.org/spice/instagram_post/ByTU6uio2s2/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/224253012"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-09-22T21:33:49+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B2ubJbHIxw9"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B2ubJbHIxw9"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2ubJbHIxw9/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/70152061_388891368436219_8927987418967476581_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=8M2HvBJy26wAX_grzt2&tp=1&oh=b01f5510d8c523eddf736b2f301ffedc&oe=605E3CFC"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2ubJbHIxw9"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/CLKr45kFomQ/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/186132144"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-08-18T18:33:31+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B1T-sWzI9TY"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B1T-sWzI9TY"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/e35/67757598_532334920639649_742411438239473030_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=105&_nc_ohc=AeQ-8X4WBGAAX_8ffZz&tp=1&oh=a99ee54792423100d91261c9decb870e&oe=605D97F6"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B1T-sWzI9TY/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B1T-sWzI9TY"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text//pointer_range_1/anno_3_emotion_164-171_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/38/B8WyMEwoF1k/emotion_relation"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CIn7ghQAxLo/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B86ayaYCBIy/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B01dAomCnP0/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8i8vYuoKre/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CEg9HQAqgtZ/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Aj7Vaq8Bv/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CD9fNVdAD42/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/ByTU6uio2s2/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CK8ulp7jOws/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4XdVMyowHk/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4Xv3KOISvV/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLSFebTDZXC/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2uHMMkCYhp/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CC3vsP_q7ac/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLgqH97pwBD/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CJb4oV6rAqK/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CK1GxgYjKoV/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9ZLNmxpLlP/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CCSw5sHoTVM/text"
+        }
+      ],
+      "emotion:triggers": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_6_emotion_53-59_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_7_emotion_104-109_anger"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text//pointer_range_1/anno_3_emotion_164-171_like"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_4_emotion_26-36_anger"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_8_emotion_100-103_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text//pointer_range_1/anno_5_emotion_91-95_like"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_5_emotion_39-49_anger"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/38"
+    },
+    {
+      "class": "emotion:Calmness",
+      "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text//pointer_range_1/anno_2_emotion_41-51_calmness"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1530463817"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-11T19:43:27+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CGNkkCJAs7z"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CGNkkCJAs7z"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/121145165_631933161020109_9212789129252182669_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=109&_nc_ohc=r6FdAdcHDF8AX9iXPIV&tp=1&oh=b469304e837939eebd14be514d329f4d&oe=605FBA09"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGNkkCJAs7z/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CGNkkCJAs7z"
+    },
+    {
+      "class": "String",
+      "content": "Le Baiser",
+      "uri": "https://w3id.org/spice/instagram_post/CEg9HQAqgtZ/text"
+    },
+    {
+      "class": "String",
+      "content": "L’arte deve confortare il disturbato e disturbare il comodo.",
+      "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text"
+    },
+    {
+      "class": "String",
+      "content": "«Un’onda verde s’avvalla: in quest’avvallamento si culla e s’abbandona la Sirena pallida, dalla fulva chioma sparsa, un braccio immerso e trasparente nell’acqua, l’altro ripiegato sul seno, con tentatrice mollezza. Dall’alto del quadro una breve barca si piega a seguir l’onda; sulla barca, proteso e supino, un adolescente cinge con un braccio l’emersa incantatrice. In quest’onda è tagliato con sommo ardire tutto il quadro. E vi par di sognare, guardandolo».\\nLuigi Pirandello \\n\\nLa Sirena / Abisso Verde\\nGiulio Aristide Sartorio",
+      "uri": "https://w3id.org/spice/instagram_post/CFPRIE9lgm7/text"
+    },
+    {
+      "class": "emotion:Like",
+      "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text//pointer_range_1/anno_5_emotion_91-95_like"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/45"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/4830497796"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-20T11:21:03+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLgq3VHprrd"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLgq3VHprrd"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLgq3VHprrd/text"
+        },
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/151787769_3679047108843624_268948060867763686_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=100&_nc_ohc=yxFfQqmXYi0AX95ZmKS&tp=1&oh=6f3cd8a7aa428a59d84a513910ac23ee&oe=605CACB9"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLgq3VHprrd"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/4386125311"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-11T16:29:45+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CGNOZVXMMfV"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CGNOZVXMMfV"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/121105365_3681823375169644_8429120971301441516_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=104&_nc_ohc=0E-n8KY9gGgAX9XkL_B&tp=1&oh=4d4c4721f38c199270b34fcd5cf7f138&oe=605F1E1B"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGNOZVXMMfV/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CGNOZVXMMfV"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/70"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2130892234"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-09-05T16:06:02+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B2CEH0joPus"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B2CEH0joPus"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text"
+        },
+        {
+          "uri": "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/67574039_1096068810582895_8262906398718339048_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=107&_nc_ohc=oP8rgvUNMOEAX8MUc07&tp=1&oh=546eb4bf3df50969996bd4a4fa7f3adf&oe=605E7E53"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLhAYryJtRx",
+      "userInteractionCount": 121
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/14025496909"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-12-10T15:27:43+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B55S6n2iloK"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B55S6n2iloK"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/75580701_449801502373486_8181626223920378764_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=UNTQyno4BEcAX8W9c6_&tp=1&oh=460482a28bd1852e82ccb56937e67079&oe=605D70C6"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B55S6n2iloK/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B55S6n2iloK"
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_5_emotion_24-30_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_2_emotion_24-30_anticipation"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_4_emotion_24-30_surprise"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_3_emotion_24-30_joy"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/55/B6IibUXIY5V/emotion_relation"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B9ZLNmxpLlP",
+      "userInteractionCount": 88
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/347668282"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-02T15:33:09+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B4XdVMyowHk"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B4XdVMyowHk"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/72917071_2463469730538644_8266276355293979276_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=KFwpozDfhJYAX8Lm_oj&tp=1&oh=9ddc376b965a6ef215550d9209f57f8e&oe=605D7FA5"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4XdVMyowHk/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B4XdVMyowHk"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B2ubJbHIxw9",
+      "userInteractionCount": 25
+    },
+    {
+      "arco-dd:hasSubject": {
+        "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text"
+      },
+      "emotion:triggers": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/29"
+    },
+    {
+      "class": "String",
+      "content": "Giulio Aristide Sartorio-La sirena #arte #artemoderna #art #libri #gamtorino #bookstagram #followforfollowback #booklover #torino",
+      "uri": "https://w3id.org/spice/instagram_post/B4f8XqWIz4Z/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B8E8_hVIb-s",
+      "userInteractionCount": 26
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/47"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6037675676"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-09-17T15:00:42+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CFPRIE9lgm7"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CFPRIE9lgm7"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CFPRIE9lgm7/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/119568919_192203699028608_283141345312902119_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=108&_nc_ohc=zuOLBepoNQEAX_xAj55&tp=1&oh=b257cae735f1fa2f813614241918077c&oe=605E5032"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CFPRIE9lgm7"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/47"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6032209907"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-05T22:38:17+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B4f8XqWIz4Z"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B4f8XqWIz4Z"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/72214732_1034187976929265_5552529924789828587_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=101&_nc_ohc=cUuOP96LqBwAX9x766e&tp=1&oh=fb67947745e076d42149a6da3c28798a&oe=60602501"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4f8XqWIz4Z/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B4f8XqWIz4Z"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CJyQn2aHfke",
+      "userInteractionCount": 224
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B2rwQ4aiKVe",
+      "userInteractionCount": 2
+    },
+    {
+      "class": "String",
+      "content": "• ( Der) Matrose Fritz Müller aus Pieschen\\n• Otto Dix\\n• 1919\\n• GAM, Torino",
+      "uri": "https://w3id.org/spice/instagram_post/CG7DtEMpisk/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLgq3VHprrd",
+      "userInteractionCount": 279
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2265192793"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-12-10T17:27:00+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CIn7ghQAxLo"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CIn7ghQAxLo"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/130302122_167461801782825_6404633278624642153_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=109&_nc_ohc=kp2e3owE67gAX-qbYZp&tp=1&oh=68140cc3eca62ebc9252fa4458649d3b&oe=605F256A"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CIn7ghQAxLo/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CIn7ghQAxLo"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/57"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6281512028"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-28T00:15:51+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B5YxBfZIFfO"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B5YxBfZIFfO"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/73455956_422615078419421_807776620522551675_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=105&_nc_ohc=cfGo-bsqXFYAX-eWx6m&tp=1&oh=93f0bfadd8fa19a1c34b7aa6574e9cbb&oe=605D1510"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5YxBfZIFfO/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5YxBfZIFfO"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CBLKhH2o5Wj",
+      "userInteractionCount": 31
+    },
+    {
+      "class": "emotion:Sadness",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_12_emotion_323-334_sadness"
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_8_emotion_309-313_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_12_emotion_323-334_sadness"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_9_emotion_309-313_surprise"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_13_emotion_63-73_like"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_11_emotion_323-334_fear"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_10_emotion_309-313_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_7_emotion_309-313_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/41/B2rwQ4aiKVe/emotion_relation"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1824749001"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2018-02-16T14:52:49+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/BfQorwCAB6K"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/BfQorwCAB6K"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/27893757_2088516771435041_739704513534885888_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=YQpXqv8wgLsAX8tMxqU&tp=1&oh=57daedb8eaf9367a6bcc6984164a567f&oe=605D0D85"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BfQorwCAB6K/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/BfQorwCAB6K"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CIn7ghQAxLo",
+      "userInteractionCount": 12
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1338884685"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-08-06T22:01:59+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B01dAomCnP0"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B01dAomCnP0"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/67655991_1419082658233132_7603161094357325437_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=104&_nc_ohc=KuTHmlyze8EAX88tNWa&tp=1&oh=ce2e41af87eeed4ed7548f47f7505ee0&oe=605F97CF"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B01dAomCnP0/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B01dAomCnP0"
+    },
+    {
+      "class": "emotion:Sadness",
+      "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text//pointer_range_1/anno_4_emotion_34-43_sadness"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B9o-GP7IK8-",
+      "userInteractionCount": 128
+    },
+    {
+      "class": "String",
+      "content": "Picabia, \"Le basier\", 1925-1926",
+      "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/CF7XWsWF7Os/text"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B3uWxGxIi5O/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text"
+        }
+      ],
+      "emotion:triggers": {
+        "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text//pointer_range_1/anno_4_emotion_34-43_sadness"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/59"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/BwzH0VyAI4R",
+      "userInteractionCount": 29
+    },
+    {
+      "class": "String",
+      "content": "Felice Casorati, Daphne #torino #latergram #arte #casorati #mood #arte #art #instalike #felicecasorati #instaart #instaartist #paintings #italy",
+      "uri": "https://w3id.org/spice/instagram_post/B3uWxGxIi5O/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B55S6n2iloK/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/55"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/353409866"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-06-23T18:04:55+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/BzDu5xxoKaM"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/BzDu5xxoKaM"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BzDu5xxoKaM/text"
+        },
+        {
+          "uri": "https://scontent-arn2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/65040773_143105856840258_7541697048831632507_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=106&_nc_ohc=em_1mheXHgcAX-2l9T6&tp=1&oh=8b0833368f4cc339bca7bfd7015a1227&oe=605DD306"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/BzDu5xxoKaM"
+    },
+    {
+      "class": "emotion:Like",
+      "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text//pointer_range_1/anno_2_emotion_58-66_like"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/CGNOZVXMMfV/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/13028612"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-06T12:20:56+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CK8ulp7jOws"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CK8ulp7jOws"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CK8ulp7jOws/text"
+        },
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/146321761_699057357449052_390394521008520711_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=100&_nc_ohc=mDIWeiGGeekAX_wIe9o&tp=1&oh=8b900703e1d8f0d731ea0e0e35d64a7b&oe=605EAC22"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CK8ulp7jOws"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B1T-sWzI9TY",
+      "userInteractionCount": 21
+    },
+    {
+      "class": "emotion:Trust",
+      "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_8_emotion_100-103_trust"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6430835891"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-23T15:29:55+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B86ayaYCBIy"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B86ayaYCBIy"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B86ayaYCBIy/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/84034010_2934699599883807_3238971500214241231_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=103&_nc_ohc=XbrWZRuoXhwAX9-RJzB&tp=1&oh=e9cd329a425539123daeae73147fd22a&oe=605F5BE4"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B86ayaYCBIy"
+    },
+    {
+      "class": "String",
+      "content": "Ritovati. stesso posto, differente posizione 🖤\\n #warholtakemeback  to  k17",
+      "uri": "https://w3id.org/spice/instagram_post/B48TBFWCfNW/text"
+    },
+    {
+      "class": "String",
+      "content": "Weekend Artistic Closure. How we can accept it? Come on, kiss me as Francis did. #gamphotoproject #gam #colori #torino #art #colour #kiss #contemporaryart #artist #sensual #artoftheday #artsy #arte #creative #draw #modernart #instaart #instaartist #instagood #painting #artgallery #drawing #photooftheday #italianartist #surrealist #picture #sketch #sketchbook  #turin #everydayartisticmovement",
+      "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1398750181"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-14T19:24:59+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLSFebTDZXC"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLSFebTDZXC"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/149447630_2737271339917970_8495359865910274232_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=102&_nc_ohc=L8BYjKG55t0AX8PymFx&tp=1&oh=615c7d6a620babbc0c83fa774ec9d4b3&oe=605EAD00"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLSFebTDZXC/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLSFebTDZXC"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6127049645"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-24T23:13:05+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B5Q7dIvHi_Y"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B5Q7dIvHi_Y"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/72346940_568727357273515_3219838212744527841_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=bk9x78FhrPkAX9bX8zv&tp=1&oh=2aff73ad144ca5dfd9ef7e5c90e84262&oe=605F56D1"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B7lNa47C6mz",
+      "userInteractionCount": 114
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/30"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/13597439454"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-14T12:26:52+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B8i6r4ToHAE"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B8i6r4ToHAE"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/83996291_127689975426549_514202415834887629_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=109&_nc_ohc=ZXUqIMI8uO0AX80kEk3&tp=1&oh=4f012da67c03e1efa014be06ac5e76ce&oe=605EBDEB"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8i6r4ToHAE/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B8i6r4ToHAE"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B7i4dndBvzU/text"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text//pointer_range_1/anno_4_emotion_34-43_sadness"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text//pointer_range_1"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/47"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/42414331731"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-11-17T21:31:21+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CHtJMIGgYDU"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CHtJMIGgYDU"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/125499663_127796502194362_4088515689177533772_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=110&_nc_ohc=idHPWEty_g4AX9RvMrM&tp=1&oh=3be4be44b22bd5b6c8f1982aa093ec65&oe=605E2C90"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CHtJMIGgYDU/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CHtJMIGgYDU"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BzDu5xxoKaM/text"
+        }
+      ],
+      "emotion:triggers": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_4_emotion_24-30_surprise"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_3_emotion_24-30_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_2_emotion_24-30_anticipation"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_5_emotion_24-30_trust"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/55"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B2uHMMkCYhp",
+      "userInteractionCount": 13
+    },
+    {
+      "class": "emotion:Anticipation",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_7_emotion_309-313_anticipation"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B8i6r4ToHAE",
+      "userInteractionCount": 27
+    },
+    {
+      "class": "emotion:Anger",
+      "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_5_emotion_39-49_anger"
+    },
+    {
+      "class": "String",
+      "content": "Scapigliato era Tranquillo Cremona, nato a #Pavia nel 1837. La sua è una costante ricerca di suggestioni sensuali esplicitate da trasparenze cromatiche e approssimazioni formali, come nell\\' \"Edera\" del 1878 (Galleria Civica d\\'arte moderna, Torino). .\\nScapigliato was Tranquillo Cremona, born in #Pavia in 1837. His is a constant search for sensual suggestions made explicit by chromatic transparencies and formal approximations, as in the \"Edera/Ivy\" of 1878.\\n\\n#art #arte #pittura #paintings #painting #quadro #canvas #quadrodelgiorno #arthistory #storiadellarte #artista #artist #museo #museum #artfollow #instaart #instalike #torino #lombardia #colors",
+      "uri": "https://w3id.org/spice/instagram_post/B7lNa47C6mz/text"
+    },
+    {
+      "class": "emotion:Anger",
+      "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_7_emotion_104-109_anger"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B01dAomCnP0",
+      "userInteractionCount": 66
+    },
+    {
+      "class": "String",
+      "content": "Art isn’t paint, it’s Love.🌈",
+      "uri": "https://w3id.org/spice/instagram_post/BvzyM24gqPG/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/36"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/5536895379"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-28T18:05:46+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B9HkmNbCbEw"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B9HkmNbCbEw"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e15/87707905_2708150102613460_2028509153350411879_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=104&_nc_ohc=Pju3-2HKBjQAX_8Otc5&tp=1&oh=da07f1e2c046a872b6fd56d4d2b73cc3&oe=605DBB6A"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9HkmNbCbEw/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B9HkmNbCbEw"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B5D2uHNIAJM/text"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B48TBFWCfNW/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CF1ZY-jiaYW/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CK3GupeBsq-/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/62"
+    },
+    {
+      "class": "String",
+      "content": "#SanValentino\\nL’edera (dettaglio), 1878, Tranquillo Cremona #tranquillocremona #scapigliatura #sanvalentino #valentines #love #lovers #artlovers #gam #gamtorino #galleriadartemoderna @gamtorino #torino #turin #arte #art #unquadroalgiorno",
+      "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/41"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/17297329663"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-09-21T20:40:36+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B2rwQ4aiKVe"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B2rwQ4aiKVe"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/70645452_440224263253907_8095912067138404690_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=TitjQzaCCEoAX9nKM2u&tp=1&oh=0e76ff8f7a9f40b6bbe296b4700f182c&oe=605F6435"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe"
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/29/B5XXcRAIzOu/emotion_relation"
+    },
+    {
+      "class": "String",
+      "content": "@makkagnom e le sue foto ✨",
+      "uri": "https://w3id.org/spice/instagram_post/B1T-sWzI9TY/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B86ayaYCBIy",
+      "userInteractionCount": 10
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/277584312"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-10-01T22:32:33+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B3FtBkPiSTc"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B3FtBkPiSTc"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B3FtBkPiSTc/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/70516337_395903701301721_7342041889062596564_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=109&_nc_ohc=WUn3O4KzzoIAX_IDUam&tp=1&oh=75ca8841847e93ebcd044a13a70542ea&oe=605F8936"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B3FtBkPiSTc"
+    },
+    {
+      "class": "String",
+      "content": "La sirena\\nGiulio Aristide Sartorio\\xa0\\n1893\\n\\nPh @dem_damico\\n.\\n.\\n.\\n.\\n#artemoderna #artecontemporanea #arte #art #modernart #artist #artgallery #contemporaryart #artwork #arteastratta #abstract #arteitaliana #gallery #abstractart #astrattismo #pittura #pitturacontemporanea #astratto #informale #materico #artcollector #design #painting #galleryart #pintura #galleriadarte #pitturaitaliana #pitturamoderna #gamtorino",
+      "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2245214666"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-09-14T19:32:09+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B2Zm3X5IUx-"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B2Zm3X5IUx-"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2Zm3X5IUx-/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/70947503_2331117580320848_5359880546198862192_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=COMyXH5NrmgAX9d0H03&tp=1&oh=8ff52df60f26a4113439c93038d6da92&oe=605D6450"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2Zm3X5IUx-"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/33/B1VpCQSI2QY/emotion_relation"
+    },
+    {
+      "class": "emotion:Fear",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_11_emotion_323-334_fear"
+    },
+    {
+      "class": "String",
+      "content": "Francis Picabia",
+      "uri": "https://w3id.org/spice/instagram_post/CJb4oV6rAqK/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B3FtBkPiSTc",
+      "userInteractionCount": 18
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_11_emotion_323-334_fear"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_9_emotion_309-313_surprise"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_8_emotion_309-313_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_12_emotion_323-334_sadness"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_10_emotion_309-313_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_7_emotion_309-313_anticipation"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_13_emotion_63-73_like"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/5581319580"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-09T19:21:44+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B8WyMEwoF1k"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B8WyMEwoF1k"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/83749758_1533492300148777_2611800497974859217_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=101&_nc_ohc=NwKqtc7DMRwAX8SNYEV&tp=1&oh=73c0741df56f4608d3211b2e8390da2d&oe=605CA584"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k"
+    },
+    {
+      "class": "String",
+      "content": "Giulio Aristide Sartorio, La Sirena (Abisso verde) - Sartorio realizza questo celebre dipinto in seguito al suo soggiorno a Londra del 1893-1894, mostrando la sua forte fascinazione per la pittura preraffaellita inglese. Protagonista della composizione dal forte taglio orizzontale è una sinuosa sirena dai capelli rossi e dalla pelle diafana verso il cui corpo immerso nelle acque trasparenti del mare si protende un pescatore dalla barca.\\nL’opera è entrata nella collezione della GAM di Torino nel 2007.\\n\\n#impressionism\\xa0#impressionistart\\xa0#art#artgram\\xa0#arthistory\\xa0#historyofart#paint\\xa0#culturalheritage\\xa0#masterpiece#beauty\\xa0#artpage\\xa0#culture#visioneimpressionista\\xa0#painter #impressionismo #impressionista #giulioaristidesartorio #sartorio #sirena #sea #mermaid",
+      "uri": "https://w3id.org/spice/instagram_post/CJyQn2aHfke/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B4f8XqWIz4Z",
+      "userInteractionCount": 92
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B6rUrm1FYSr",
+      "userInteractionCount": 2
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/289000632"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-03T13:18:21+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CK1GxgYjKoV"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CK1GxgYjKoV"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/145476242_176585273822959_1501676390077428860_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=107&_nc_ohc=8rRvHTRriyIAX-oydce&tp=1&oh=e359b246d3113a6cf6d027cec88e1367&oe=605DAD87"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CK1GxgYjKoV/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CK1GxgYjKoV"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/24862545"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-02T21:09:49+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B8E8_hVIb-s"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B8E8_hVIb-s"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8E8_hVIb-s/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/83682721_120248282858812_7978642793975813429_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=104&_nc_ohc=fvN5PnyjKQIAX_SwbUo&tp=1&oh=2af08d5dcc066d40df755ca416ee0583&oe=605DC1F3"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B8E8_hVIb-s"
+    },
+    {
+      "class": "emotion:Like",
+      "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text//pointer_range_1/anno_2_emotion_58-66_like"
+    },
+    {
+      "class": "emotion:Joy",
+      "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_6_emotion_53-59_joy"
+    },
+    {
+      "arco-dd:hasSubject": {
+        "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text"
+      },
+      "emotion:triggers": {
+        "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/33"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CFpiv5phvEH/text"
+        }
+      ],
+      "emotion:triggers": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_13_emotion_63-73_like"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_11_emotion_323-334_fear"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_8_emotion_309-313_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_12_emotion_323-334_sadness"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_9_emotion_309-313_surprise"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_10_emotion_309-313_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_7_emotion_309-313_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/41"
+    },
+    {
+      "class": "String",
+      "content": "One must picture everything in the world as an enigma, and live in the world as if in a vast museum of strangeness \\n#giorgiodechirico #gamtorino #art #sundaymood",
+      "uri": "https://w3id.org/spice/instagram_post/BzDu5xxoKaM/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/BzDu5xxoKaM",
+      "userInteractionCount": 19
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLRES8ZFH_c",
+      "userInteractionCount": 56
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B8WuQIrq44K/text"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/70/B2CEH0joPus/emotion_relation"
+    },
+    {
+      "class": "emotion:Like",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_13_emotion_63-73_like"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B8i8vYuoKre",
+      "userInteractionCount": 104
+    },
+    {
+      "class": "emotion:Dislike",
+      "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+    },
+    {
+      "class": "String",
+      "content": "Giulio Aristide Sartorio, La Sirena o Abisso verde, 1893. \\nPirandello ha letto il quadro così: “[…] un’onda verde s’avvalla: in questo avvallamento si culla e s’abbandona la Sirena pallida, dalla fulva chioma sparsa, un braccio immerso e trasparente nell’acqua, l’altro ripiegato sul seno, con tentatrice mollezza […] un adolescente cinge con un braccio l’emersa incantatrice. In quest’onda è tagliato con sommo ardire tutto il quadro. E vi par di sognare, guardandolo.” #giulioaristidesartorio #sirena #abissoverde #pirandello #artecontemporanea #gamtorino #passion #inspire",
+      "uri": "https://w3id.org/spice/instagram_post/CBLKhH2o5Wj/text"
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/38/B5Q7dIvHi_Y/emotion_relation"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B2CEH0joPus",
+      "userInteractionCount": 39
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/41"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/5796669768"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-01-20T15:36:03+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B7i4dndBvzU"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B7i4dndBvzU"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/83148275_2552684205058264_2415400264332379875_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=104&_nc_ohc=6ykm4RrLTKcAX9Jm9lH&tp=1&oh=7f30d77ea4036ffa2f9f71bd5316ac68&oe=606008E8"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7i4dndBvzU/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B7i4dndBvzU"
+    },
+    {
+      "class": "String",
+      "content": "~ Turin Through my Eyes ~ \\n(Il Bacio - Francis Ricabia 1925 GAM Torino 13.08.2020)\\n#torino #turin #italia #italy #galleriadartemoderna #gamtorino #gam #artemoderna #artecontemporanea #arte #fai #fondoambienteitaliano #francisricabia #ilbacio #thelovers #thekiss #art #modernart #contemporaryart",
+      "uri": "https://w3id.org/spice/instagram_post/CIn7ghQAxLo/text"
+    },
+    {
+      "class": "String",
+      "content": "#mercolediclassici\\n. \"Queste sono le ultime parole che scriverò nel diario. [...] Con il cuore lieto ho aperto la porta e sono corso lungo il corridoio. Avevo visto che il portone non era chiuso a chiave e dunque potevo fuggire. Con le mani tremanti dall\\'emozione, ho sciolto i catenacci e aperto i chiavistelli.\\nMa il portone non si muoveva. Mi ha assalito la disperazione.\"\\n.\\n\\nBram Stoker, Dracula, I ed. 1897, Feltrinelli 2015.\\n.\\n\\nF. Mosso, La moglie di Claude, 1877, GAM, Torino.\\n.\\n#bramstoker #dracula #francescomosso #gamtorino #raccontidelterrore #terrore #vampire #vampiro #vampires #leggere #classicidellaletteratura #ticonsigliounlibro #books #bookstagramitalia #libri #teatro #sergiorubini #luigilocascio #libreriaperimmagini #BiancoCritico",
+      "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B55S6n2iloK",
+      "userInteractionCount": 1
+    },
+    {
+      "class": "emotion:Trust",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_10_emotion_309-313_trust"
+    },
+    {
+      "class": "String",
+      "content": "\"woman\"\\n\\n#woman #shadow #waitandsee #stop #timeless #life #love\\n#art #paint #sculpture #museum \\n#gam #galleriaartemoderna #torino",
+      "uri": "https://w3id.org/spice/instagram_post/CHClv08jicq/text"
+    },
+    {
+      "class": "String",
+      "content": "Artistic quarantine in the world 🖼 - Le tre finestre (La pianura della torre) - Jessie Boswell Leeds\\n.\\n.\\n.\\n#lefinestredeglialtri #finestra #window #fenetre #نافذة #窓 #窗口 #окно #ventana #fenster #world #quarantine #25giorniacasa #coronavirus #virus #paint #art #love #artistic #gamtorino",
+      "uri": "https://w3id.org/spice/instagram_post/B9v8NvWIW7L/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/59"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/276136"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-07-19T18:27:34+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CC1JGvro3RJ"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CC1JGvro3RJ"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/107460092_628566408030749_3666454680689107751_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=105&_nc_ohc=x1dp6NofAvIAX_jYaV4&tp=1&oh=9b0b27f59bce5d661940640aedb1c3cc&oe=605D39AF"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ"
+    },
+    {
+      "class": "emotion:Like",
+      "uri": "https://w3id.org/spice/instagram_post/B8WyMEwoF1k/text//pointer_range_1/anno_3_emotion_164-171_like"
+    },
+    {
+      "class": "emotion:Anticipation",
+      "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B7i4dndBvzU",
+      "userInteractionCount": 6
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/30"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2136160692"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-14T09:55:26+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLRES8ZFH_c"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLRES8ZFH_c"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text"
+        },
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/149592523_452925086068521_2884688964028040710_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=109&_nc_ohc=tisuu73uoIEAX-FFc4m&tp=1&oh=cfea5632936960c54c019a122bbce9cc&oe=605F0585"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c"
+    },
+    {
+      "class": "String",
+      "content": "Francis Bacon......se non possiamo baciarci, possiamo contagiarci di bellezza...",
+      "uri": "https://w3id.org/spice/instagram_post/B9ZLNmxpLlP/text"
+    },
+    {
+      "class": "String",
+      "content": "GAM Torino\\nFrancia Picabia, LeBaiser\\nCasorati\\n#gamtorinocittadarte #casorati #galleriaartemodernatorino #arte #artecontemporanea",
+      "uri": "https://w3id.org/spice/instagram_post/CD9fNVdAD42/text"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text//pointer_range_1"
+    },
+    {
+      "class": "String",
+      "content": "Il bacio\\n\\nFrancis Picabia",
+      "uri": "https://w3id.org/spice/instagram_post/B86ayaYCBIy/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CHtJMIGgYDU",
+      "userInteractionCount": 61
+    },
+    {
+      "class": "String",
+      "content": "🕵️Il curioso caso di un dipinto tagliato in due🕵️ (che ritrae un suicidio).\\nAngelo Morbelli,\\xa0Asfissia!\\xa0(1884; Parte sinistra: olio su tela, 159 x 199,5 cm; Torino, GAM, Galleria Civica d’Arte Moderna e Contemporanea, Fondazione Guido ed Ettore De Fornaris. Parte destra: olio su tela, 160 x 98 cm; Collezione privata).\\nAngelo Morbelli\\xa0(Alessandria, 1854 - Milano, 1919) sconvolse pubblico e critica con la sua\\xa0Asfissia!, cronaca d’un drammatico suicidio d’una coppia divisa da marcate differenze sociali e quindi non in grado di vivere con serenità un rapporto che dobbiamo immaginare fortemente osteggiato dalle convenzioni dell’epoca. Il dipinto, oggettivo e scevro di qualunque\\xa0intento moralista, cerca solo di coinvolgere lo spettatore: il pennello di Morbelli si concentra sulla tavola con gli avanzi d’una cena, sui fiori sparsi su tutto il pavimento (fiori recisi, e dunque simbolo della sventurata sorte dei due amanti), sulla luce del mattino che filtra dalle imposte rivelando a poco a poco la tragedia che s’è consumata nella camera d’albergo, coi corpi dell’uomo e della donna esanimi in secondo piano. L’opera non ebbe gran fortuna e Morbelli la tagliò in due parti per liberare la porzione destra, quella dov’è presente la coppia e ancor oggi le due parti smembrate sono custodite in collezioni diverse. ⭐Taggaci con @finestresullarte⭐  #beniculturali30 #culturalheritage30\\n#exploringitaly #ilikeitaly #ig_italia #igers_italia #igersitalia #visititaly #vivoitalia #yallersitalia #ig_europe #ig_worldclub #angelomorbelli #igworldclub_museums #italiait #suicidio #suicide #simbolism #simbolismo #ottocentoitaliano #eighteenthcentury #eighteenthcenturyart #gamtorino #artemoderna #arteottocento #sigloxix",
+      "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/22358405"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-01T10:24:10+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B4UVLTQoogq"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B4UVLTQoogq"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/75616171_149146746359926_615975849442999594_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=aEWOPZp9W7AAX99NfC2&tp=1&oh=5ac19f200ca95fad25cb76e19b7845bf&oe=605CBB9B"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text//pointer_range_1/anno_2_emotion_41-51_calmness"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text//pointer_range_1"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B1VpCQSI2QY",
+      "userInteractionCount": 453
+    },
+    {
+      "class": "emotion:Surprise",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_9_emotion_309-313_surprise"
+    },
+    {
+      "class": "String",
+      "content": "Due amiche e un museo ❤\\n@fra.cort",
+      "uri": "https://w3id.org/spice/instagram_post/CK1GxgYjKoV/text"
+    },
+    {
+      "class": "emotion:Joy",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text//pointer_range_1/anno_8_emotion_309-313_joy"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/406590002"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-04-23T14:11:46+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/BwmPu1fgdmF"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/BwmPu1fgdmF"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/57156336_146785876371284_4168607226468084259_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=108&_nc_ohc=nzlMc9N7iIAAX9HIZwP&tp=1&oh=f3ce16230340d7cf6cb4d390ef5e5272&oe=605FE211"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BwmPu1fgdmF/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/BwmPu1fgdmF"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B6IibUXIY5V",
+      "userInteractionCount": 7
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CK1GxgYjKoV",
+      "userInteractionCount": 24
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B-zQHkQoCmc/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lNa47C6mz/text"
+        }
+      ],
+      "emotion:triggers": {
+        "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text//pointer_range_1/anno_2_emotion_41-51_calmness"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/30"
+    },
+    {
+      "class": "emotion:Joy",
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_3_emotion_24-30_joy"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/45"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2319782"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-04-06T09:36:19+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B-oZoxzqRAy"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B-oZoxzqRAy"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B-oZoxzqRAy/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/91910812_151851846310748_2031685923632148253_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=108&_nc_ohc=BIzHFdSLvdoAX-CY_H2&tp=1&oh=71044a0742ba8d0eecf26213d0449d63&oe=605F2FC3"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B-oZoxzqRAy"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B9v8NvWIW7L",
+      "userInteractionCount": 45
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/5569540807"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-25T19:35:10+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CGxtnBHgLAU"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CGxtnBHgLAU"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/122277959_155935042871382_4749403716679847998_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=106&_nc_ohc=KFC0iBZK6bEAX8XIHfE&tp=1&oh=2bc93871285e48bc6ab9b5634cea4fdc&oe=605E59DF"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B7lLwdXIstQ",
+      "userInteractionCount": 35
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B55TS0diDcd",
+      "userInteractionCount": 1
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/67"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6516656830"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-03-12T17:23:32+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B9o-GP7IK8-"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B9o-GP7IK8-"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/89862156_513768116005904_8666415748563381703_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=108&_nc_ohc=RTfdvx759boAX9AaBjo&tp=1&oh=4fff399ae14495d83d12b327cb4621d6&oe=605EDB4D"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9o-GP7IK8-/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B9o-GP7IK8-"
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5nKPcgnam0/text//pointer_range_1/anno_2_emotion_29-35_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/37/B5nKPcgnam0/emotion_relation"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CGNOZVXMMfV",
+      "userInteractionCount": 13
+    },
+    {
+      "class": "String",
+      "content": "Torino, GAM (2019) - Una prima carrellata di opere esposte nel bellissimo museo GAM di Torino. Le foto ritraggono, nell’ordine: 1) Estate (l’amaca) di Felice Carena; 2) Ritratto di signora di Achille Funi; 3) Battesimo di Antonio Donghi; 4) Ritratto della signorina Severini, di Gino Severini; 5) Bagnante al sole (Arianna abbandonata) di Giorgio de Chirico",
+      "uri": "https://w3id.org/spice/instagram_post/B2rwQ4aiKVe/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/7361614183"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-03-07T17:48:25+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B9cI-IMHIxs"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B9cI-IMHIxs"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9cI-IMHIxs/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/82056570_260105008313016_1129546437317054694_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=100&_nc_ohc=sTA09-u-JCsAX-he6dc&tp=1&oh=5f06d70daa12a5758a95a159c34a3ee9&oe=605F1DFF"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B9cI-IMHIxs"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/29"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/7046103786"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-27T11:13:05+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B5XXcRAIzOu"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B5XXcRAIzOu"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/72398029_147913136617850_6826687257056416774_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=MhWL3krZjIMAX97NJX6&tp=1&oh=de119b3c341d227695e3878d70b7e176&oe=605F4297"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5XXcRAIzOu"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/30"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/12522483034"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-04-10T14:44:47+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B-zQHkQoCmc"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B-zQHkQoCmc"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B-zQHkQoCmc/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/92314108_1145228179150548_635602631476611178_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=100&_nc_ohc=S3E7O4BIceUAX9YbSXp&tp=1&oh=7f1fcc9925a1da1a52d57f94865c4ed3&oe=605E9E3C"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B-zQHkQoCmc"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B9v8NvWIW7L/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLgq3VHprrd/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B-oZoxzqRAy/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/45"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_8_emotion_100-103_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_7_emotion_104-109_anger"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B9o-GP7IK8-/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2257278927"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-09-18T20:32:36+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B2kA9pnl3fU"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B2kA9pnl3fU"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/69503591_158841358510643_624115847363627485_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=mf1wt1pL0qwAX9-7EsW&tp=1&oh=85a99925e1e57bd257a828d48e33bd02&oe=605EBF50"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2kA9pnl3fU/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2kA9pnl3fU"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/41"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/5735630026"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-21T12:25:53+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLjXFDJjPbh"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLjXFDJjPbh"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/153261295_2094140300715992_2131130780296544090_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=108&_nc_ohc=mPRvRcQT-BMAX_iyxSN&tp=1&oh=ec1255a70d489398cd5deaa9dad65cf3&oe=605F9D0A"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLjXFDJjPbh/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLjXFDJjPbh"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2696269044"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-18T14:39:39+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B5Aj7Vaq8Bv"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B5Aj7Vaq8Bv"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5Aj7Vaq8Bv/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/73178206_1014014458958010_1837899322505604862_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=106&_nc_ohc=LyrJ9ZbgTlwAX-f-SwL&tp=1&oh=5b4b725b0abedca867837df3a8dd1b41&oe=605FFB0B"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5Aj7Vaq8Bv"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B5D2uHNIAJM",
+      "userInteractionCount": 17
+    },
+    {
+      "class": "String",
+      "content": "LET\\'S KEEP ON RIDING\\nCome la Callas amava dire di essere nata il 4 dicembre, in quanto giorno in cui si festeggia Santa Barbara, noi abbiamo deciso di festeggiare il compleanno il 10 aprile, così da stare per sempre sotto l\\'astro di Tranquillo Cremona, il quale, anche se non propriamente rococò, rimane uno dei nostri pittori preferiti.\\nSe l\\'anno scorso avevamo scelto un\\'opera simbolo della GAM milanese, quest\\'anno vi illustriamo brevemente l\\'ultimo capolavoro del pittore di Pavia. Si tratta de \"L\\'edera\", dipinto nel 1878, anno in cui Cremona morì a Milano per colpa del piombo contenuto nella biacca, pigmento che lui testava direttamente su sé stesso.\\nIl soggetto è ovviamente un potente abbraccio passionale tra due amanti, visto come se lo spettatore stesse spiando dietro l\\'edera che compare sulla destra.\\nMa chi sono i due personaggi? Ultimamente molti credono siano due donne, visto come un tentativo di Cremona di fare scandalo, ma tradizionalmente in esso si riconoscono Lisetta Cagnoli, cognata del pittore, e Alfredo Catalani, compositore lucchese che raggiungerà discreta fama di lì a poco con \"Edmea\", \"Loreley\" e soprattutto con la sua ultima opera \"La Wally\" (di cui molti conoscono giusto l\\'aria della protagonista all\\'inizio perché chi confeziona pubblicità di acque naturali pensa che sia molto azzeccata come colonna sonora). Ci piace pensare che la verità sia nella coppia Cagnoli-Catalani, così che \"L\\'edera\" possa essere considersta la vera summa della corrente scapigliata che stava avendo il suo apice nella Milano di quegli anni, dato che vi compaiono due dei suoi maggiori protagonisti, in un fil rouge che unisce la storia della pittura e quella della musica.\\nDunque buon compleanno scapigliato a noi.\\n.\\n.\\n#tranquillocremona #edera #compleannidellagam #scapigliatura #arthistory #artlovers #painting #gamtorino #alfredocatalani #buoncompleanno #buoncompleannoanoi #100post #ottocento #cavalcoscapigliato #keeponriding #lawally #edmea",
+      "uri": "https://w3id.org/spice/instagram_post/B-zQHkQoCmc/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLKr45kFomQ",
+      "userInteractionCount": 130
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CG7DtEMpisk",
+      "userInteractionCount": 15
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B-oZoxzqRAy",
+      "userInteractionCount": 8
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text//pointer_range_1"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text//pointer_range_1/anno_5_emotion_91-95_like"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text//pointer_range_1"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/55"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/2261797219"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-12-16T13:31:51+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B6IibUXIY5V"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B6IibUXIY5V"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/78969265_399289210786163_7720139422205959708_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=111&_nc_ohc=iloMWDn7dwoAX97v1Rx&tp=1&oh=fef3d45845f8930f6c63aa4e9737cc44&oe=605E5E0F"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/33"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1371590318"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-08-19T10:02:45+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B1VpCQSI2QY"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B1VpCQSI2QY"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text"
+        },
+        {
+          "uri": "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/67758785_468210114017896_5005380325945747212_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=104&_nc_ohc=82GOSkZBXAEAX8QhHv6&tp=1&oh=9518f1cc1c9614533a630b77d4ef8e4c&oe=605ECDE8"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY"
+    },
+    {
+      "arco-dd:hasSubject": {
+        "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text"
+      },
+      "emotion:triggers": {
+        "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/70"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CC3vsP_q7ac",
+      "userInteractionCount": 5
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B3uWxGxIi5O",
+      "userInteractionCount": 79
+    },
+    {
+      "class": "String",
+      "content": "#Picabia •Le baiser",
+      "uri": "https://w3id.org/spice/instagram_post/CC3vsP_q7ac/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CJb4oV6rAqK",
+      "userInteractionCount": 10
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1936331303"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-09T18:47:21+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B8WuQIrq44K"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B8WuQIrq44K"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8WuQIrq44K/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/83316225_725107674982271_5912150146119298770_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=111&_nc_ohc=zguBIQ1VUCsAX9TbS4A&tp=1&oh=ae78a45db9180e27d379a4874178c49c&oe=60602041"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B8WuQIrq44K"
+    },
+    {
+      "class": "String",
+      "content": "E ci sono giorni che al lavoro non ti sembra di lavorare... #edulab @learntechaccelerator #vr",
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/CLRES8ZFH_c/text//pointer_range_1/anno_2_emotion_41-51_calmness"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/30/CLRES8ZFH_c/emotion_relation"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/62"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/794524213"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-16T22:54:55+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B48TBFWCfNW"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B48TBFWCfNW"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B48TBFWCfNW/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/73065297_775050702918911_7226352932528018469_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=NUg9UmpsvF0AX-wFju8&tp=1&oh=323e56647d7423b91273e23c4580386d&oe=605FD23F"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B48TBFWCfNW"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B9HkmNbCbEw/text"
+    },
+    {
+      "class": "String",
+      "content": "Der Kuss.\\n#fixit #lovers #gam #art",
+      "uri": "https://w3id.org/spice/instagram_post/B5Aj7Vaq8Bv/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CGxtnBHgLAU",
+      "userInteractionCount": 38
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CF7XWsWF7Os",
+      "userInteractionCount": 5
+    },
+    {
+      "class": "String",
+      "content": "Datti n’ Andy!💥 \\n#AndyWarhol #OrangeCarCrash #GAMTorino #Art #TotalBlack #Orange #Warhol @clubsilencioofficial",
+      "uri": "https://w3id.org/spice/instagram_post/CF1ZY-jiaYW/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CD9fNVdAD42",
+      "userInteractionCount": 22
+    },
+    {
+      "class": "String",
+      "content": "ɐᴉqɐɔᴉԀ sᴉɔuɐɹℲ",
+      "uri": "https://w3id.org/spice/instagram_post/B01dAomCnP0/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/BfQorwCAB6K/text"
+    },
+    {
+      "class": "String",
+      "content": "play new GAMe (2/3)\\n.\\n#francispicabia \\n#marcchagall \\n#paulklee \\n#yvesklein \\n#andywarhol",
+      "uri": "https://w3id.org/spice/instagram_post/CK8ulp7jOws/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B6rUrm1FYSr/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/BvzyM24gqPG",
+      "userInteractionCount": 48
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B9cI-IMHIxs",
+      "userInteractionCount": 2
+    },
+    {
+      "class": "String",
+      "content": "#fernandleger #le #baiser #il #bacio #the #kiss #1926 #gamtorino #permanent #collection #torino",
+      "uri": "https://w3id.org/spice/instagram_post/B4Xv3KOISvV/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CK3GupeBsq-",
+      "userInteractionCount": 88
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/39"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/42529488887"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-04T18:01:42+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CF7XWsWF7Os"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CF7XWsWF7Os"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CF7XWsWF7Os/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/120524850_749890965560224_5556014553842116034_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=104&_nc_ohc=Ra4eKFJN2JMAX-0N4jw&tp=1&oh=af9c3fe4d6107e16bb46ae1d6b9de82d&oe=605EE58E"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CF7XWsWF7Os"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/4830497796"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-20T11:14:35+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLgqH97pwBD"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLgqH97pwBD"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/152379873_1000031133738594_6292298892430692764_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=106&_nc_ohc=UbaBzfBiR8MAX8_GYfi&tp=1&oh=8a97fd244f20b8558a8d24b30a579df9&oe=605EA77A"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLgqH97pwBD/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLgqH97pwBD"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/196074778"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-07-06T10:01:54+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CCSw5sHoTVM"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CCSw5sHoTVM"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CCSw5sHoTVM/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/106503951_154758036176214_4561288062591966277_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=106&_nc_ohc=vV8P8dHlg8sAX-IRmXg&tp=1&oh=733217cae7c2dd9c174518cd935564dd&oe=605E6CE4"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CCSw5sHoTVM"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/CGNkkCJAs7z/text"
+    },
+    {
+      "class": "String",
+      "content": "#francispicabia",
+      "uri": "https://w3id.org/spice/instagram_post/B4XdVMyowHk/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CK8ulp7jOws",
+      "userInteractionCount": 23
+    },
+    {
+      "class": "String",
+      "content": "•Cultura mummificata•\\n#GAM #galleriadartemoderna #imparalarteemettiladaparte #giornatadelpatrimonio",
+      "uri": "https://w3id.org/spice/instagram_post/B2ubJbHIxw9/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/194776472"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-09-22T18:39:25+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B2uHMMkCYhp"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B2uHMMkCYhp"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B2uHMMkCYhp/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/70860041_131087084920007_1794864213675335410_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=zVuvqKIMGiUAX_sduor&tp=1&oh=4316ef7f277bf8d180fcf7747a3c8abb&oe=605DB1DC"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B2uHMMkCYhp"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/30"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6531737069"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-01-21T13:17:40+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B7lNa47C6mz"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B7lNa47C6mz"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lNa47C6mz/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/81143394_491304081528015_6936780250939145699_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=103&_nc_ohc=LJ_ZyTh5dTcAX9q1t2P&tp=1&oh=983dcb11c6f40c205ad3482347d5da94&oe=6060234C"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B7lNa47C6mz"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B1LqMDYCe8V",
+      "userInteractionCount": 1
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CFPRIE9lgm7",
+      "userInteractionCount": 68
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/42"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/4830497796"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-02-20T14:29:07+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CLhAYryJtRx"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CLhAYryJtRx"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-15/e35/152397827_824589498093206_1720611922203957019_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=102&_nc_ohc=RMia04XIwLYAX8NGD2g&tp=1&oh=a4e5ba140eab5ca954a2c62ba23fee81&oe=605F7A4A"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CLhAYryJtRx/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CLhAYryJtRx"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/25708206951"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-07-20T18:43:13+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CC3vsP_q7ac"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CC3vsP_q7ac"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CC3vsP_q7ac/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/109487576_1520871964781983_6258183239298271872_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=107&_nc_ohc=qPnk178Z-B8AX_UN_0t&tp=1&oh=3e6109634ab25d6391ddc870320943f2&oe=605FE2D9"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CC3vsP_q7ac"
+    },
+    {
+      "class": "String",
+      "content": "Loving him was red\\n\\n🌹- Le baiser, Francis Picabia\\n🐞- Attese, Lucio Fontana\\n🔺- Intersuperficie curva dal rosso, Paolo Scheggia\\n.\\n.\\n.\\n.\\n.\\n.\\n#modernart\\n#turin\\n#red",
+      "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B5YxBfZIFfO",
+      "userInteractionCount": 92
+    },
+    {
+      "class": "emotion:Like",
+      "uri": "https://w3id.org/spice/instagram_post/B1VpCQSI2QY/text//pointer_range_1/anno_2_emotion_58-66_like"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/47"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/36432970106"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2021-01-08T14:15:18+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CJyQn2aHfke"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CJyQn2aHfke"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/135757446_2919782718268866_765367054189976500_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=106&_nc_ohc=3YfDJoM1s5QAX_KFpg0&tp=1&oh=f6be3f1eb9e9fdebbeaeab182c2d50e2&oe=60603E94"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CJyQn2aHfke/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CJyQn2aHfke"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text//pointer_range_1/anno_4_emotion_34-43_sadness"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/59/CC1JGvro3RJ/emotion_relation"
+    },
+    {
+      "class": "String",
+      "content": "~\\nIl Marinaio Fritz Müller da Pieschen ⛴\\nOtto Dix,1919",
+      "uri": "https://w3id.org/spice/instagram_post/B8E8_hVIb-s/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B5Q7dIvHi_Y",
+      "userInteractionCount": 8
+    },
+    {
+      "class": "String",
+      "content": "“Il bacio “\\n\\nFrancis Picabia •\\n•\\n#art #museum #torino #artist #galleriaartemoderna #travel #travelphotography",
+      "uri": "https://w3id.org/spice/instagram_post/B2uHMMkCYhp/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/CLjXFDJjPbh/text"
+    },
+    {
+      "class": "String",
+      "content": "‘Le baiser’,Francis Picabia. #art",
+      "uri": "https://w3id.org/spice/instagram_post/CLSFebTDZXC/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLjXFDJjPbh",
+      "userInteractionCount": 13
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/199585184"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-12-30T01:45:10+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B6rUrm1FYSr"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B6rUrm1FYSr"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6rUrm1FYSr/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/76897871_562271274329911_7494223577403899103_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=p62FXDNkfi8AX971i1i&tp=1&oh=211423302f9c7384a4a785f3ce06735e&oe=606025A9"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B6rUrm1FYSr"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/209930514"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-19T21:21:35+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B5D2uHNIAJM"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B5D2uHNIAJM"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B5D2uHNIAJM/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/71971780_2514543545481999_1115044240854664881_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=103&_nc_ohc=c6tPicrGH1IAX8yrVhv&tp=1&oh=508fe039a8cce379e532673444061330&oe=605FD4FE"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B5D2uHNIAJM"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/47/B1WZYkSIQUJ/emotion_relation"
+    },
+    {
+      "class": "emotion:Dislike",
+      "uri": "https://w3id.org/spice/instagram_post/B5Q7dIvHi_Y/text//pointer_range_1/anno_1_emotion_57-63_dislike"
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_6_emotion_53-59_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_5_emotion_39-49_anger"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_4_emotion_26-36_anger"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/38/B7lLwdXIstQ/emotion_relation"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/387602091"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-03T13:53:00+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CF4WGQSDNYR"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CF4WGQSDNYR"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/120637150_779977789244690_1452553822532389650_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=102&_nc_ohc=DUVN1HS1LFcAX95DJgP&tp=1&oh=6211982ea39ba0dec40bceb2bb5653ff&oe=605FBCB6"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CF4WGQSDNYR/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CF4WGQSDNYR"
+    },
+    {
+      "class": "String",
+      "content": "Hans Hartung, Composition T. 50 - 5, olio su tela (1950)✨ stupenda! _ check out: @gamtorino ❤😌 |",
+      "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_4_emotion_24-30_surprise"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_3_emotion_24-30_joy"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_5_emotion_24-30_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_2_emotion_24-30_anticipation"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/BwmPu1fgdmF",
+      "userInteractionCount": 143
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/39"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/6914118506"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-11-01T08:53:33+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CHClv08jicq"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CHClv08jicq"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CHClv08jicq/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-2.cdninstagram.com/v/t51.2885-15/e35/123145535_859486534858756_5151234692119887131_n.jpg?_nc_ht=scontent-hkg4-2.cdninstagram.com&_nc_cat=104&_nc_ohc=7GZqXijTra0AX_aESW-&tp=1&oh=a32524466564617165769dfb8700a6f6&oe=605EE94E"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CHClv08jicq"
+    },
+    {
+      "class": "String",
+      "content": "La @gamtorino è quasi sempre una delusione (questione di gusti)... scavando un po’ si trova però qualcosa da salvare #hulmetnewton #casorati #giroingiro #duepassi #torinoèlamiacittà #gam #artemoderna out",
+      "uri": "https://w3id.org/spice/instagram_post/CC1JGvro3RJ/text"
+    },
+    {
+      "class": "String",
+      "uri": "https://w3id.org/spice/instagram_post/B1LqMDYCe8V/text"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CC1JGvro3RJ",
+      "userInteractionCount": 17
+    },
+    {
+      "class": "String",
+      "content": "\"L\\'unico momento in cui mi sento vivo è quando dipingo\"\\n-Vincent van Gogh\\n🌷💙✈",
+      "uri": "https://w3id.org/spice/instagram_post/BwzH0VyAI4R/text"
+    },
+    {
+      "arco-dd:hasSubject": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CJyQn2aHfke/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CBLKhH2o5Wj/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CFPRIE9lgm7/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CHtJMIGgYDU/text"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4f8XqWIz4Z/text"
+        }
+      ],
+      "emotion:triggers": {
+        "uri": "https://w3id.org/spice/instagram_post/B1WZYkSIQUJ/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/47"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B48TBFWCfNW",
+      "userInteractionCount": 16
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLSFebTDZXC",
+      "userInteractionCount": 22
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CEg9HQAqgtZ",
+      "userInteractionCount": 24
+    },
+    {
+      "emotion:emotion": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_8_emotion_100-103_trust"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CGxtnBHgLAU/text//pointer_range_1/anno_7_emotion_104-109_anger"
+        }
+      ],
+      "uri": "https://w3id.org/spice/gam/artefact/38/CGxtnBHgLAU/emotion_relation"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/37"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/529603263"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-04-28T14:12:45+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/BwzH0VyAI4R"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/BwzH0VyAI4R"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/BwzH0VyAI4R/text"
+        },
+        {
+          "uri": "https://scontent-arn2-2.cdninstagram.com/v/t51.2885-15/e35/57506283_389434871901581_1147902882822809176_n.jpg?_nc_ht=scontent-arn2-2.cdninstagram.com&_nc_cat=105&_nc_ohc=3hdaX87W5q8AX_pp0py&tp=1&oh=19ae3422562545d07858bc512873ccd9&oe=605CFD6C"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/BwzH0VyAI4R"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/395183193"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-11-02T18:15:04+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B4Xv3KOISvV"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B4Xv3KOISvV"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/73358782_174575633594630_2052587691260363974_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=lh8-trB_R5QAX_LV_Va&tp=1&oh=8261cb92678ab91ee26ff69a1240e80f&oe=605DDBF8"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B4Xv3KOISvV/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B4Xv3KOISvV"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/59"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/49856756"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-10-17T17:26:56+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B3uWxGxIi5O"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B3uWxGxIi5O"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B3uWxGxIi5O/text"
+        },
+        {
+          "uri": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/71191987_596890910847311_1960812463416550820_n.jpg?_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Bwu0pAwJ8xcAX8ZVEup&tp=1&oh=01f84d16de51612aa42bc4b80810b167&oe=605EF2C4"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B3uWxGxIi5O"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CCSw5sHoTVM",
+      "userInteractionCount": 13
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/47"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/550008109"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-06-08T14:40:25+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CBLKhH2o5Wj"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CBLKhH2o5Wj"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/102299147_256804595757545_3171070471021021313_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=105&_nc_ohc=rWmLm2QVamQAX-W0LnS&tp=1&oh=0f2d4e3f0741cb77c5ed52d166f4340d&oe=605CBEB3"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CBLKhH2o5Wj/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CBLKhH2o5Wj"
+    },
+    {
+      "emotion:emotion": {
+        "uri": "https://w3id.org/spice/instagram_post/B4UVLTQoogq/text//pointer_range_1/anno_5_emotion_91-95_like"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/38/B4UVLTQoogq/emotion_relation"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text"
+      },
+      "semiotics:denotes": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_5_emotion_39-49_anger"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_4_emotion_26-36_anger"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1/anno_6_emotion_53-59_joy"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text//pointer_range_1"
+    },
+    {
+      "class": "emotion:Surprise",
+      "uri": "https://w3id.org/spice/instagram_post/B6IibUXIY5V/text//pointer_range_1/anno_4_emotion_24-30_surprise"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/62"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/523870078"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-10-02T10:24:03+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CF1ZY-jiaYW"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CF1ZY-jiaYW"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CF1ZY-jiaYW/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/120533575_796811054398658_2805208340889078420_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=102&_nc_ohc=AIkxBxZrRkMAX__dFzf&tp=1&oh=d25a4adaf42e2f3840f8dfd1e925f07e&oe=605F0756"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CF1ZY-jiaYW"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B4XdVMyowHk",
+      "userInteractionCount": 125
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/242855847"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-01-21T13:03:08+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B7lLwdXIstQ"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B7lLwdXIstQ"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/84097580_686630395205266_6738467330244726266_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=110&_nc_ohc=-txE47DilgkAX-49fPJ&tp=1&oh=ce31542d1039d6df80d5f1d680b5bc2a&oe=605D6BEC"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B7lLwdXIstQ"
+    },
+    {
+      "class": "String",
+      "content": "只爱oversize",
+      "uri": "https://w3id.org/spice/instagram_post/B2Zm3X5IUx-/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/59"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/4440774"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-08-15T13:00:26+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B1LqMDYCe8V"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B1LqMDYCe8V"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B1LqMDYCe8V/text"
+        },
+        {
+          "uri": "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/67406230_506100863474006_2935256032654544419_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=0XpZnOwOPVwAX-Usgsr&tp=1&oh=c1f549e82120a74c001ddd6b3b895c78&oe=605F1907"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B1LqMDYCe8V"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/440604515"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2019-06-04T22:54:18+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/ByTU6uio2s2"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/ByTU6uio2s2"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://scontent-arn2-1.cdninstagram.com/v/t51.2885-15/e35/60676951_490361578370098_976660272323108342_n.jpg?_nc_ht=scontent-arn2-1.cdninstagram.com&_nc_cat=110&_nc_ohc=LPGGJ9m8N34AX-McrF_&tp=1&oh=7dd90332e51584eaa44b01082aea7d71&oe=605EF928"
+        },
+        {
+          "uri": "https://w3id.org/spice/instagram_post/ByTU6uio2s2/text"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/ByTU6uio2s2"
+    },
+    {
+      "earmark:refersTo": {
+        "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text"
+      },
+      "semiotics:denotes": {
+        "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text//pointer_range_1/anno_2_emotion_58-66_like"
+      },
+      "uri": "https://w3id.org/spice/instagram_post/B2CEH0joPus/text//pointer_range_1"
+    },
+    {
+      "class": "String",
+      "content": "Otto Dix\\nMarinaio",
+      "uri": "https://w3id.org/spice/instagram_post/B9cI-IMHIxs/text"
+    },
+    {
+      "class": "String",
+      "content": "Andy?\\n(“La cosa migliore di una fotografia è che non cambia mai, anche quando le persone in essa lo fanno”)\\n\\n#art #modernart #warhol #andywarhol #contemporaryart #popart #pop #torino #turin #gamtorino #museum #gallery #arte #people #peoplephotography #artphotography #andywarhol #andywarholart #painting #painters #modernart #artecontemporanea #italy #italia #tagsforlikes #likeforlike #like4like #instagood #instalike #instaart",
+      "uri": "https://w3id.org/spice/instagram_post/CK3GupeBsq-/text"
+    },
+    {
+      "class": "String",
+      "content": "“Le tre finestre ( La pianura della Torre)” Jessie Boswell, 1924",
+      "uri": "https://w3id.org/spice/instagram_post/B-oZoxzqRAy/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/38"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/5536895379"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-02-14T12:44:50+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/B8i8vYuoKre"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/B8i8vYuoKre"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/B8i8vYuoKre/text"
+        },
+        {
+          "uri": "https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/83732942_2530790593861641_3230373474915734566_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=109&_nc_ohc=6H7nUsDwFYoAX_IJP-1&tp=1&oh=850d569796bc9ad47a3b89c69e91423f&oe=605E3B29"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/B8i8vYuoKre"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CHClv08jicq",
+      "userInteractionCount": 36
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B2Zm3X5IUx-",
+      "userInteractionCount": 100
+    },
+    {
+      "class": "String",
+      "content": "Le tre finestre, Jessie Boswell",
+      "uri": "https://w3id.org/spice/instagram_post/CLgq3VHprrd/text"
+    },
+    {
+      "class": "String",
+      "content": "🔎",
+      "uri": "https://w3id.org/spice/instagram_post/BwmPu1fgdmF/text"
+    },
+    {
+      "about": {
+        "uri": "https://w3id.org/spice/gam/artefact/41"
+      },
+      "author": {
+        "uri": "https://w3id.org/spice/gam/instagram_user/1286689635"
+      },
+      "class": "SocialMediaPosting",
+      "datePublished": {
+        "class": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "value": "2020-09-27T19:54:56+00:00"
+      },
+      "interactionStatistic": {
+        "uri": "https://w3id.org/spice/gam/likes_counter/CFpiv5phvEH"
+      },
+      "schema:url": {
+        "uri": "https://www.instagram.com/p/CFpiv5phvEH"
+      },
+      "sharedContent": [
+        {
+          "uri": "https://w3id.org/spice/instagram_post/CFpiv5phvEH/text"
+        },
+        {
+          "uri": "https://scontent-hkg4-1.cdninstagram.com/v/t51.2885-15/e35/120139888_836119493651127_1376811460197333489_n.jpg?_nc_ht=scontent-hkg4-1.cdninstagram.com&_nc_cat=103&_nc_ohc=ICcDjoaqFFcAX9ReYQ8&tp=1&oh=8316bc10ebf62b639d468eeab9f5de46&oe=605FC005"
+        }
+      ],
+      "uri": "https://w3id.org/spice/instagram_post/CFpiv5phvEH"
+    },
+    {
+      "class": "String",
+      "content": "Non ho capito se @paganoalessandra fa parte della mostra o no 🤔",
+      "uri": "https://w3id.org/spice/instagram_post/CFpiv5phvEH/text"
+    },
+    {
+      "arco-dd:hasSubject": {
+        "uri": "https://w3id.org/spice/instagram_post/CHClv08jicq/text"
+      },
+      "uri": "https://w3id.org/spice/gam/artefact/39"
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B5XXcRAIzOu",
+      "userInteractionCount": 32
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B5Aj7Vaq8Bv",
+      "userInteractionCount": 11
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B8WyMEwoF1k",
+      "userInteractionCount": 89
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B9HkmNbCbEw",
+      "userInteractionCount": 153
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CLgqH97pwBD",
+      "userInteractionCount": 211
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/B5nKPcgnam0",
+      "userInteractionCount": 41
+    },
+    {
+      "class": "InteractionCounter",
+      "uri": "https://w3id.org/spice/gam/likes_counter/CFpiv5phvEH",
+      "userInteractionCount": 36
+    }
+  ]
+}

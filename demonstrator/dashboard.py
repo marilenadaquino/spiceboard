@@ -653,12 +653,12 @@ def show_must_go_on():
 ##### SIMPLE AUTHENTICATION ###
 ###############################
 
-# authenticated = False
-# pw_container =  st.empty()
-# state_password = None
-# if state_password is None:
-#     state_password = pw_container.text_input("Enter the pass phrase", type="password")
-# if state_password == 'SPICEmeUP!':
-#     pw_container.empty()
-#     show_must_go_on()
-show_must_go_on()
+authenticated = False
+pw_container =  st.empty()
+state_password = None
+if state_password is None:
+    state_password = pw_container.text_input("Enter the pass phrase", type="password")
+if state_password == 'SPICEmeUP!':
+    pw_container.empty()
+    show_must_go_on()
+#show_must_go_on()

@@ -427,7 +427,7 @@ def show_must_go_on():
             if local_img.status_code == 200:
                 #if os.path.isfile('GAM_test_catalogue_images/'+loc_img):
                 #st.image('GAM_test_catalogue_images/'+loc_img)
-                st.image(local_img)
+                st.image(local_img.raw)
             else:
                 st.image(img)
         else:

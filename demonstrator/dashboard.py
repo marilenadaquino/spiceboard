@@ -658,7 +658,7 @@ pw_container =  st.empty()
 state_password = None
 if state_password is None:
     state_password = pw_container.text_input("Enter the pass phrase", type="password")
-if state_password == 'SPICEmeUP!':
+if state_password == st.secrets["passphrase"]:
     pw_container.empty()
     show_must_go_on()
 #show_must_go_on()

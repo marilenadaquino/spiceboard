@@ -22,11 +22,16 @@ def parse_data():
     def load_gam_catalogue_data():
         """get museum cataloguing data"""
 
-        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_catalogue.json"
-        with open(source) as f:
-            sour = json.load(f)
+        #source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_catalogue.json"
+        
+        #with open(source) as f:
+        #    sour = json.load(f)
+        
         catalogue = []
+        key = 	"f6b5743b-220c-4802-8163-7c9de0d6c56d"
 
+        sour = requests.get('https://api2.mksmart.org/browse/f1f1018c-6e72-4e95-953e-889d9ae0c914', auth=HTTPBasicAuth(key, key)).json()
+        
         gam_game_list = defaultdict(list)
         for entity in sour["@graph"]:
             # get gam sessions
@@ -115,10 +120,13 @@ def parse_data():
         """get twitter data"""
 
         # TODO change with API
-        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_twitter.json"
-        with open(source) as f:
-            sour = json.load(f)
+        #source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_twitter.json"
+        #with open(source) as f:
+        #    sour = json.load(f)
+        key = 	"f6b5743b-220c-4802-8163-7c9de0d6c56d"
 
+        sour = requests.get('https://api2.mksmart.org/browse/74270a7b-d9f6-4b15-b7dc-4246505cb409', auth=HTTPBasicAuth(key, key)).json()
+        
         twitter_data = []
         for entity in sour["@graph"]:
             if "class" in entity and entity["class"] == "SocialMediaPosting":
@@ -142,9 +150,12 @@ def parse_data():
     def load_gam_instagram_data(data):
         """get instagram data"""
         # TODO change with API
-        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_instagram.json"
-        with open(source) as f:
-            sour = json.load(f)
+        #source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_instagram.json"
+        #with open(source) as f:
+        #    sour = json.load(f)
+        key = 	"f6b5743b-220c-4802-8163-7c9de0d6c56d"
+
+        sour = requests.get('https://api2.mksmart.org/browse/a098187d-e5e0-4be8-9961-4e92918cf32a', auth=HTTPBasicAuth(key, key)).json()
         instagram_data = []
         for entity in sour["@graph"]:
             if "class" in entity and entity["class"] == "SocialMediaPosting":

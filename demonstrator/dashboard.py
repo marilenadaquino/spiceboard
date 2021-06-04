@@ -653,12 +653,27 @@ def show_must_go_on():
 ##### SIMPLE AUTHENTICATION ###
 ###############################
 
-authenticated = False
-pw_container =  st.empty()
-state_password = None
-if state_password is None:
-    state_password = pw_container.text_input("Enter the pass phrase", type="password")
-if state_password == st.secrets["passphrase"]:
-    pw_container.empty()
+# authenticated = False
+# pw_container =  st.empty()
+# state_password = None
+# if state_password is None:
+#     state_password = pw_container.text_input("Enter the pass phrase", type="password")
+# if state_password == st.secrets["passphrase"]:
+#     pw_container.empty()
+#     show_must_go_on()
+from SessionState import get
+
+session_state = get(password='')
+
+if session_state.password != st.secrets["passphrase"]:
+    pwd_placeholder = st.sidebar.empty()
+    pwd = pwd_placeholder.text_input("passphrase:", value="", type="password")
+    session_state.password = pwd
+    if session_state.password == st.secrets["passphrase"]:
+        pwd_placeholder.empty()
+        show_must_go_on()
+    elif session_state.password != '':
+        st.error("the passphrase you entered is incorrect")
+else:
     show_must_go_on()
 #show_must_go_on()

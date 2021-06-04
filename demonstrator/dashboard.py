@@ -423,8 +423,11 @@ def show_must_go_on():
         loc_img = img[0].split('/')[-1]
 
         if len(img) != 0:
-            if os.path.isfile('GAM_test_catalogue_images/'+loc_img):
-                st.image('GAM_test_catalogue_images/'+loc_img)
+            local_img = requests.get("https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/GAM_test_catalogue_images/""+loc_img)
+            if local_img.status_code == 200:
+                #if os.path.isfile('GAM_test_catalogue_images/'+loc_img):
+                #st.image('GAM_test_catalogue_images/'+loc_img)
+                st.image(local_img)
             else:
                 st.image(img)
         else:

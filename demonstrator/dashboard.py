@@ -22,7 +22,7 @@ def parse_data():
     def load_gam_catalogue_data():
         """get museum cataloguing data"""
 
-        source = "rdf_transform/GAM_test_catalogue.json"
+        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_catalogue.json"
         with open(source) as f:
             sour = json.load(f)
         catalogue = []
@@ -115,7 +115,7 @@ def parse_data():
         """get twitter data"""
 
         # TODO change with API
-        source = "rdf_transform/GAM_test_twitter.json"
+        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_twitter.json"
         with open(source) as f:
             sour = json.load(f)
 
@@ -142,7 +142,7 @@ def parse_data():
     def load_gam_instagram_data(data):
         """get instagram data"""
         # TODO change with API
-        source = "rdf_transform/GAM_test_instagram.json"
+        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAM_test_instagram.json"
         with open(source) as f:
             sour = json.load(f)
         instagram_data = []
@@ -169,7 +169,7 @@ def parse_data():
     def load_gamgame_data(data):
         """get GAM game data"""
         # TODO change with API
-        source = "rdf_transform/GAMgame.json"
+        source = "https://raw.githubusercontent.com/marilenadaquino/spiceboard/main/demonstrator/rdf_transform/GAMgame.json"
         with open(source) as f:
             sour = json.load(f)
 
@@ -642,12 +642,12 @@ def show_must_go_on():
 ##### SIMPLE AUTHENTICATION ###
 ###############################
 
-# authenticated = False
-# pw_container =  st.empty()
-# state_password = None
-# if state_password is None:
-#     state_password = pw_container.text_input("Enter the pass phrase", type="password")
-# if state_password == 'SPICEmeUP!':
-#     pw_container.empty()
-#     show_must_go_on()
-show_must_go_on()
+authenticated = False
+pw_container =  st.empty()
+state_password = None
+if state_password is None:
+    state_password = pw_container.text_input("Enter the pass phrase", type="password")
+if state_password == 'SPICEmeUP!':
+    pw_container.empty()
+    show_must_go_on()
+#show_must_go_on()
